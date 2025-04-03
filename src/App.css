@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -35,4 +41,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Make sure the spreadsheet takes up all available space */
+.App > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* Remove default body margin to maximize space */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }

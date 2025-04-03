@@ -1,0 +1,1234 @@
+/* .Chat pane */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 0px 16px;
+
+position: relative;
+width: 350px;
+height: 810px;
+
+background: #F5F5F5;
+border-left: 1px solid #E0E0E0;
+border-radius: 0px;
+
+
+/* Sidecar header */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px;
+gap: 176px;
+
+width: 350px;
+height: 64px;
+
+background: #F5F5F5;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+margin: 0 auto;
+width: 133px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Copilot icon
+
+<p>Type: product;</p><p>Family: na;</p><p>Status: active;</p><p>Build: na;</p><p>Metaphors: copilot, handshake, duality, ai;</p><p><br></p><p>Please note — use the primary (rainbow) variant as color variants are being deprecated.</p>
+*/
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Shape */
+
+position: absolute;
+left: 45.16%;
+right: 14.15%;
+top: 9.38%;
+bottom: 57.88%;
+
+background: radial-gradient(61.19% 81.61% at 85.44% 100.65%, #00AEFF 9.56%, #2253CE 77.32%, #0736C4 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Shape */
+
+position: absolute;
+left: 15.25%;
+right: 45.21%;
+top: 57.77%;
+bottom: 9.37%;
+
+background: radial-gradient(61.72% 75.41% at 18.14% 32.93%, #FFB657 0%, #FF5F3D 63.37%, #C02B3C 92.34%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Shape */
+
+position: absolute;
+left: 3.12%;
+right: 38.28%;
+top: 9.38%;
+bottom: 29.68%;
+
+background: linear-gradient(177.64deg, #3DCBFF 1.8%, rgba(5, 136, 247, 0) 25.53%), linear-gradient(175.3deg, #0D91E1 27.42%, #52B471 55.69%, #98BD42 69.76%, #FFC800 94.07%);
+
+
+/* Shape */
+
+position: absolute;
+left: 38.27%;
+right: 3.13%;
+top: 29.67%;
+bottom: 9.37%;
+
+background: linear-gradient(180.11deg, #F8ADFA -4.49%, rgba(168, 110, 221, 0) 13.18%), radial-gradient(156.82% 125.43% at 82.99% -9.79%, #8C48FF 6.62%, #F2598A 50%, #FFB152 89.58%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Title + Preview label */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+width: 101px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px 2px;
+gap: 10px;
+
+width: 53px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Copilot */
+
+width: 53px;
+height: 22px;
+
+/* Web/Subtitle 2
+
+Subject title
+*/
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+color: #242424;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Padding + Preview label */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+
+width: 44px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Preview label
+
+Preview label
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 4px;
+gap: 10px;
+
+display: none;
+width: 44px;
+height: 16px;
+
+background: #F0F0F0;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Copilot actions */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+margin: 0 auto;
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Button
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+display: none;
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Button
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+display: none;
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Button
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Dismiss
+
+Keyword: fluent-icon;
+Metaphor: x, close, cancel, remove;
+
+Used in scenarios where UI is closed, dismissed, or removed.
+
+Tag: Cancel, Remove, X, Delete
+*/
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Shape */
+
+position: absolute;
+width: 12px;
+height: 12px;
+left: calc(50% - 12px/2);
+top: calc(50% - 12px/2);
+
+background: #424242;
+
+
+/* Output group */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 16px 2px;
+gap: 12px;
+
+width: 350px;
+height: 608px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Output 1
+
+Output
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 12px;
+
+display: none;
+width: 318px;
+height: 586px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Output 2
+
+Output
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 12px;
+
+display: none;
+width: 288px;
+height: 336px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Output 3
+
+Output
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 12px;
+
+display: none;
+width: 288px;
+height: 586px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Output 4
+
+Output
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 12px;
+
+display: none;
+width: 288px;
+height: 586px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Input
+
+Input
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 12px 16px 0px;
+gap: 8px;
+
+width: 350px;
+height: 122px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* SuggestionList
+
+Suggestion group
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 8px;
+
+width: 318px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Row */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 318px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 285px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 285px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 224px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 285px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 186px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Suggestion
+
+Suggested prompt
+*/
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 4px;
+
+display: none;
+width: 285px;
+max-width: 288px;
+height: 24px;
+
+border: 1px solid #60BD82;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Button
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 8px;
+gap: 4px;
+
+display: none;
+width: 114px;
+height: 24px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* ChatInput */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 8px 6px;
+gap: 8px;
+isolation: isolate;
+
+width: 318px;
+height: 78px;
+
+background: #FFFFFF;
+border: 1px solid #D1D1D1;
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 4px 0px;
+
+width: 302px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 294px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Placeholder */
+
+width: 294px;
+height: 20px;
+
+/* Web/Body 1
+
+Body
+*/
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+color: #707070;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Footer */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 302px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* AttachmentList
+
+Attachment group
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 4px;
+gap: 4px;
+
+display: none;
+width: 193px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Status text */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 6px 4px 0px;
+gap: 4px;
+
+display: none;
+width: 272px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Buttons */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+width: 302px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Count */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 4px;
+gap: 6px;
+
+margin: 0 auto;
+width: 56px;
+height: 22px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* # */
+
+display: none;
+width: 48px;
+height: 14px;
+
+/* Web/Caption 2
+
+Metadata (limited)
+*/
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 14px;
+/* identical to box height, or 140% */
+text-align: right;
+
+color: #B10E1C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Input Actions */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+
+margin: 0 auto;
+width: 105px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Prompt guide 
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Book
+
+<p>Keyword: fluent-icon, word, excel, powerpoint;</p><p>Metaphor: Read, formulas;</p><p><br></p><p>Used in general book scenarios and in formulas.</p>
+
+Tags:  Dictionary;
+*/
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Shape */
+
+position: absolute;
+width: 12px;
+height: 16px;
+left: calc(50% - 12px/2);
+top: calc(50% - 16px/2);
+
+background: #424242;
+
+
+/* Attach
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+display: none;
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Plugin
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+display: none;
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Divider
+
+Keyword: fluent 2, web, separator
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 5px 4px 4px;
+
+width: 32px;
+height: 9px;
+
+transform: rotate(-90deg);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Line 1 */
+
+box-sizing: border-box;
+
+width: 24px;
+height: 0px;
+
+border: 1px solid #E0E0E0;
+transform: rotate(-90deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Mic
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Mic
+
+Keyword: fluent-icon, teams;
+Metaphor: microphone, audio, sound, sound wave, meeting;
+
+Used to general microphone audio scenarios.
+*/
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Shape */
+
+position: absolute;
+width: 11px;
+height: 16px;
+left: calc(50% - 11px/2);
+top: calc(50% - 16px/2 - 0px);
+
+background: #424242;
+
+
+/* Send
+
+<p>Fluent does not recommend using shadows on buttons. However, in cases where a shadow must be used for consistency within an experience, use the Shadow 4 token.</p><p><br></p><p>Keyword: fluent 2, web, action, command</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px;
+
+width: 32px;
+height: 32px;
+
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Send
+
+Keyword: fluent-icon;
+Metaphor: paper plane, mail, message;
+Direction: mirror;
+
+Used in message &amp; sending scenarios.
+*/
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Shape */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: calc(50% - 16px/2 + 0px);
+top: calc(50% - 16px/2 + 0px);
+
+background: #424242;
+
+
+/* .Drop Base */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+display: none;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #F0F0F0;
+border: 1px dashed #D1D1D1;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
