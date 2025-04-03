@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Workbook } from '@fortune-sheet/react';
+import { AzureOpenAI } from "openai";
 import { 
   FluentProvider, 
   webLightTheme,
@@ -23,6 +24,14 @@ import '@fortune-sheet/react/dist/index.css';
 import './App.css';
 import './chatpane.css';
 
+// Initialize Azure OpenAI client
+const client = new AzureOpenAI({
+  apiKey: process.env.REACT_APP_AZURE_OPENAI_API_KEY,
+  endpoint: process.env.REACT_APP_AZURE_OPENAI_ENDPOINT,
+  apiVersion: "2024-02-15-preview",
+  dangerouslyAllowBrowser: true  // Enable browser usage
+});
+
 // ChatMessage component to display individual messages
 const ChatMessage = ({ message, isUser }) => (
   <div className={`chat-message ${isUser ? 'user-message' : 'bot-message'}`}>
@@ -31,7 +40,7 @@ const ChatMessage = ({ message, isUser }) => (
 );
 
 // ChatPane component
-const ChatPane = ({ onSendMessage, messages }) => {
+const ChatPane = ({ onSendMessage, messages, isLoading }) => {
   const [inputText, setInputText] = useState('');
 
   const handleSend = () => {
@@ -70,6 +79,7 @@ const ChatPane = ({ onSendMessage, messages }) => {
         {messages.map((msg, index) => (
           <ChatMessage key={index} message={msg.text} isUser={msg.isUser} />
         ))}
+        {isLoading && <Text>Loading...</Text>}
       </div>
 
       <div className="Input">
@@ -109,6 +119,27 @@ const ChatPane = ({ onSendMessage, messages }) => {
   );
 };
 
+// Test Azure OpenAI configuration
+const testAzureOpenAI = async () => {
+  console.log('Testing Azure OpenAI configuration...');
+  console.log('Endpoint:', process.env.REACT_APP_AZURE_OPENAI_ENDPOINT);
+  console.log('Deployment:', process.env.REACT_APP_AZURE_OPENAI_DEPLOYMENT);
+  
+  try {
+    const response = await client.chat.completions.create({
+      model: process.env.REACT_APP_AZURE_OPENAI_DEPLOYMENT,
+      messages: [{ role: "user", content: "Hello" }],
+      temperature: 0.7,
+      max_tokens: 50
+    });
+    console.log('Azure OpenAI Test Successful');
+    return true;
+  } catch (error) {
+    console.error(' Azure OpenAI Test Failed:', error);
+    return false;
+  }
+}
+
 function App() {
   const [messages, setMessages] = useState([]);
   const [data, setData] = useState([{
@@ -117,6 +148,12 @@ function App() {
     config: {},
     status: 1,
   }]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Run test on component mount
+  useEffect(() => {
+    testAzureOpenAI();
+  }, []);
 
   const getNonEmptyCells = (sheetData) => {
     const nonEmptyCells = [];
@@ -163,21 +200,42 @@ function App() {
     );
   };
 
-  const handleChatMessage = (message) => {
-    setMessages(prev => [...prev, { text: message, isUser: true }]);
-    
-    const nonEmptyCells = getNonEmptyCells(data);
-    setMessages(prev => [...prev, { 
-      text: renderCellsTable(nonEmptyCells),
-      isUser: false 
-    }]);
+  const handleChatMessage = async (message) => {
+    try {
+      // Add user message immediately
+      setMessages(prev => [...prev, { text: message, isUser: true }]);
+      setIsLoading(true);
+
+      const response = await client.chat.completions.create({
+        model: process.env.REACT_APP_AZURE_OPENAI_DEPLOYMENT,
+        messages: [
+          { role: "system", content: "You are a helpful assistant." },
+          { role: "user", content: message }
+        ],
+        temperature: 0.7,
+        max_tokens: 800
+      });
+
+      const aiResponse = response.choices[0].message.content;
+      // Add AI response to messages
+      setMessages(prev => [...prev, { text: aiResponse, isUser: false }]);
+    } catch (error) {
+      console.error('Error:', error);
+      setMessages(prev => [...prev, { text: "Sorry, there was an error processing your request.", isUser: false }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <FluentProvider theme={webLightTheme}>
       <div className="App">
         <div className="app-container">
-          <ChatPane onSendMessage={handleChatMessage} messages={messages} />
+          <ChatPane 
+            onSendMessage={handleChatMessage} 
+            messages={messages} 
+            isLoading={isLoading}
+          />
           <div className="spreadsheet-container">
             <Workbook 
               data={data}
