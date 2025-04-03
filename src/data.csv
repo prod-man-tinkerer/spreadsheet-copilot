@@ -1,0 +1,18 @@
+Name,Status,Date, Purchase,Gender,Call Status,Customer Key,Column1,Country,Amount,Email,Phone
+Eugene Huang,Order confirmed,43597,127,M,Incomplete,11001,,India,8890,Eugene.huang@contoso.in,4626931672
+Eugene Huang,Order confirmed,43597,127,M,Incomplete,11001,,India,8890,Eugene.huang@contoso.in,4626931672
+Marco Mehta,To follow later,43598,219,M,Complete,11007,,India,15330,Marco.mehta@contoso.in,5637540979
+Marco Mehta,To follow later,43598,219,M,,11007,,India,15330,Marco.mehta@contoso.in,5637540979
+Bob Vadi,Order confirmed,43538,202,F,Incomplete,11008,,India,14140,Rob.verhoff@contoso.in,9739640827
+Bob Vadi,Order confirmed,43538,202,F,Not confirmed,11008,,India,14140,Rob.verhoff@contoso.in,9739640827
+Shannon Wadia,deal in progress,43579,467,F,Confirmed,11017,,India,32690,Shannon.wang@contoso.in,7069664448
+Shannon Wadia,order confirmed,43579,467,F,Confirmed,11017,,India,32690,Shannon.wang@contoso.in,(706) 966-4448
+Abby ,Order confirmed,43617,307,M,Confirmed,11018,,India,21490,Clarence.rai@contoso.in,2425342333
+Clarence Rain,check price,43617,307,M,Confirmed,11018,,India,21490,Clarence.rai@contoso CR.in,2425342333
+Jessie Sharma,Deal in progress,43545,360,M,Not confirmed,11027,,India,25200,Jessie.zhao@contoso.in,3431444688
+Jessie Sharma,Deal in progress,43545,360,M,Not confirmed,11027,,India,25200,Jessie.zhao@contoso.in,3431444688
+Jimmy Zunjarwadi,Deal in progress,43574,188,M,Confirmed,11029,,India,13160,Jimmy.moreno@contoso.in,7925648232
+Jimmy Zunjarwadi,Deal in progress,43574,188,M,Confirmed,11029,,India,13160,Jimmy.moreno@contoso.in,7925648232
+Denise Stone,Deal in progress,43570,396,F,Confirmed,11032,,India,27720,Denise.stone@contoso.in,7353372083
+Denise Stone,Order confirmed,43570,400,F,Confirmed,11032,,India,28000,Denise.stone@contoso.in,7353372083
+Wendy Dominguez,Deal in progress,44328,25,F,Not confirmed,11035,,India,1750,Wendy.dominguez@contoso.in,9211265286
