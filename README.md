@@ -61,9 +61,94 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Azure Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This application is configured for deployment to Azure Static Web Apps.
+
+### Prerequisites
+
+1. **Azure Account**: You need an active Azure subscription
+2. **Azure OpenAI Service**: Set up an Azure OpenAI resource with a deployed model
+3. **GitHub Repository**: The code should be in a GitHub repository
+
+### Environment Variables
+
+The application requires the following environment variables:
+
+- `REACT_APP_AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key
+- `REACT_APP_AZURE_OPENAI_ENDPOINT`: Your Azure OpenAI endpoint URL
+
+### Deployment Steps
+
+#### Option 1: Deploy via Azure Portal
+
+1. **Create Azure Static Web App**:
+   - Go to the Azure Portal
+   - Create a new "Static Web App" resource
+   - Connect to your GitHub repository
+   - Set the build details:
+     - App location: `/`
+     - Output location: `build`
+
+2. **Configure Environment Variables**:
+   - In the Azure Portal, go to your Static Web App
+   - Navigate to "Configuration" → "Application settings"
+   - Add the required environment variables:
+     - `REACT_APP_AZURE_OPENAI_API_KEY`
+     - `REACT_APP_AZURE_OPENAI_ENDPOINT`
+
+3. **Deploy**:
+   - Push your code to the main branch
+   - Azure will automatically build and deploy your app
+
+#### Option 2: Deploy via GitHub Actions (Manual Setup)
+
+If you prefer to set up the GitHub Actions workflow manually:
+
+1. **Get Azure Static Web Apps API Token**:
+   - Create a Static Web App in Azure Portal
+   - Copy the deployment token from the "Manage deployment token" option
+
+2. **Configure GitHub Secrets**:
+   - In your GitHub repository, go to Settings → Secrets and variables → Actions
+   - Add the following secrets:
+     - `AZURE_STATIC_WEB_APPS_API_TOKEN`: Your deployment token
+     - `REACT_APP_AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key
+     - `REACT_APP_AZURE_OPENAI_ENDPOINT`: Your Azure OpenAI endpoint
+
+3. **Deploy**:
+   - The GitHub Actions workflow will automatically trigger on push to main branch
+
+### Local Development
+
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Environment Setup**:
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your actual Azure OpenAI credentials
+   ```
+
+3. **Run Development Server**:
+   ```bash
+   npm start
+   ```
+
+### Features
+
+- **FortuneSheet Integration**: Full-featured spreadsheet component
+- **Azure OpenAI Chat**: AI-powered chat functionality
+- **Fluent UI**: Microsoft's design system for consistent UX
+- **Responsive Design**: Works on desktop and mobile devices
+
+### Troubleshooting
+
+- **CORS Issues**: Azure OpenAI is configured with `dangerouslyAllowBrowser: true` for client-side usage
+- **Environment Variables**: Ensure all variables are prefixed with `REACT_APP_` for React apps
+- **Build Failures**: Check that all dependencies are properly installed
 
 ### `npm run build` fails to minify
 
